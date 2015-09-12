@@ -10,7 +10,7 @@
   
   
   <properties>
-		<vaadin.version>7.5.0</vaadin.version>
+		<vaadin.version>7.5.5</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 		<project.source.version>1.7</project.source.version>
 		<project.target.version>1.7</project.target.version>
@@ -118,13 +118,13 @@
 		<dependency>
 	    <groupId>io.undertow</groupId>
 	    <artifactId>undertow-core</artifactId>
-	    <version>1.0.1.Final</version>
+	    <version>1.2.12.Final</version>
 		</dependency>
 		  
 		<dependency>
 		    <groupId>io.undertow</groupId>
 		    <artifactId>undertow-servlet</artifactId>
-		    <version>1.0.1.Final</version>
+		    <version>1.2.12.Final</version>
 		</dependency>
   </dependencies>
   
