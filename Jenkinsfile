@@ -6,10 +6,10 @@ pipeline {
         sh 'ls -lart'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        sh '''withMaven("Maven_3.5.3"){
- sh \'mvn clean install\'
+        sh '''withMaven(jdk: \'JDK8_172\', maven: \'maven_3.5.3\') {
+    sh \'mvn clean install\'
 }'''
         }
       }
