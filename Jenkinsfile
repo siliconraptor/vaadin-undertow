@@ -7,8 +7,22 @@ pipeline {
       }
     }
     stage('testing and build') {
-      steps {
-        echo 'hello'
+      parallel {
+        stage('firefox') {
+          steps {
+            echo 'firefox testing'
+          }
+        }
+        stage('internet explorer') {
+          steps {
+            echo 'IE testing'
+          }
+        }
+        stage('chrome') {
+          steps {
+            echo 'chrome testing'
+          }
+        }
       }
     }
     stage('finishing up') {
