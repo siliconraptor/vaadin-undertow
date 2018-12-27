@@ -32,6 +32,9 @@ pipeline {
     }
     stage('Finished') {
       steps {
+        s3Download bucket: 'aws-nested-templates', file: 'sg-rules.json'
+        sh 'ls -lart'
+        sh 'cat sg-rules.json'
         echo 'The end!'
       }
     }
