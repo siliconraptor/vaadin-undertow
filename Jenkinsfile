@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Finished') {
       steps {
-        s3Download bucket: 'jenkins-bucket-tests', file: 'test.txt'
+        s3Download bucket: 'jenkins-bucket-tests', file: 'test.txt', path: 'test.txt'
         sh 'ls -lart'
         sh 'cat sg-rules.json'
         echo 'The end!'
