@@ -25,9 +25,14 @@ pipeline {
         }
       }
     }
-    stage('finishing up') {
+    stage('Approval') {
       steps {
-        echo 'done'
+        input id: 'Required approval', message: 'Enter a password to proceed', ok: 'Approve', submitter: 'mjimenez'
+      }
+    }
+    stage('Finished') {
+      steps {
+        echo 'The end!'
       }
     }
   }
